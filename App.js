@@ -50,9 +50,6 @@ const Section = ({children, title}) => {
   );
 };
 
-import HelloWorld from './components/HelloWorld';
-import Geolocator from './components/Geolocator';
-
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -68,16 +65,12 @@ const App = () => {
         style={backgroundStyle}>
         <Header />
         <View
-          style={styles.acrylicBackground}>
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
           <Section title="Hello community days!">
             <Text>Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.</Text>
-          </Section>
-          <Section title="Hello world">
-            <HelloWorld name="Matteo" />
-          </Section>
-          <Section title="Geolocation">
-            <Geolocator />          
           </Section>
           <Section title="Learn More">
             <Text>Read the docs to discover what to do next:</Text>
